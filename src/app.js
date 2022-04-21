@@ -1,10 +1,10 @@
 const express = require("express")
 
-const studentsRoutes = require("./routes/studentsRoutes")
+require("dotenv").config()
 
 const app = express()
 
-require("dotenv").config()
+const studentsRoutes = require("./routes/studentsRoutes")
 
 app.use("/students", studentsRoutes)
 
