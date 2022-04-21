@@ -4,6 +4,8 @@ const studentsRoutes = require("./routes/studentsRoutes")
 
 const app = express()
 
+require("dotenv").config()
+
 app.use("/students", studentsRoutes)
 
 app.get("/*", (req, res) => {
