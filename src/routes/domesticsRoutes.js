@@ -8,7 +8,8 @@ router.get("/", domesticsCtrl.getAll)
 
 router.post("/", domesticsCtrl.postOne)
 
-// router.get("/:id", studentsCtrl.getOneById)
+router.put("/:id", domesticsCtrl.updateOne )
+
 
 module.exports = router
 

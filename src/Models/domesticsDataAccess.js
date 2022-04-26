@@ -15,3 +15,12 @@ exports.insertOne = (animal) => {
       .then(([result]) => {id: result.insertId, species, age, habitat})
   };
 
+  exports.replaceOne = (animalId, animal) => {
+      return db
+        .promise()
+        .query("UPDATE domestic SET ? WHERE id = ?", [animal, animalId])
+        .then(([result]) => {
+          return {id: result.insertId, ...animal }
+          })
+        };
+
